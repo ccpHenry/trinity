@@ -24,7 +24,7 @@ std::atomic<uint64_t> AudioGeometryResData::s_nextId{ 1 };
 bool g_eveIsAudioOcclusionGeometryEnabled = false;
 TRI_REGISTER_SETTING( "eveIsAudioOcclusionGeometryEnabled", g_eveIsAudioOcclusionGeometryEnabled );
 
-int g_grannyDeprecationLevel = (int)GrannyDeprecationLevel::DO_NOTHING;
+int g_grannyDeprecationLevel = (int)GrannyDeprecationLevel::LOG_ERROR_AND_ASSERT;
 TRI_REGISTER_SETTING( "grannyDeprecationLevel", g_grannyDeprecationLevel );
 
 CCP_STATS_DECLARE( geometryResBytes, "Trinity/geometryResBytes", false, CST_MEMORY, "Size of memory occupied by geometry resources." );
